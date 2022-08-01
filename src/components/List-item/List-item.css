@@ -1,54 +1,46 @@
 .listItem{
+    position: relative;
+    font-size: 35px;
+    text-align: left;
+}
+.listItem span{
+    cursor: pointer;
+    margin-left: 40px;
+}
+.btns{
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    border: solid black;
-    padding: 10px;
-    border-radius: 6px;
+    justify-content: center;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+}
+.check-btn{
+    border: 2px solid #00008b;
+    border-radius: 3px;
+    transition: 0.1s;
+    color: transparent;
+    right: 0;
+    top: 16px;
+    font-size: 30px;
+}
+.erase-btn{
+    border: none;
+    left: 0;
+    top: 18px;
+    font-size: 20px;
 }
 .done{
+    pointer-events: none;
+}
+.listItem span.done{
     text-decoration: line-through;
 }
-.taskButton{
-    box-sizing: border-box;
-    height: 30px;
-    width: 30px;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 0.1s;
-    border: 2px solid;
-    border-radius: 6px;
-    background-color: white;
-}
-.taskButton:disabled{
-    background-color: gray;
+.check-btn.done{
     pointer-events: none;
-    color: rgb(105, 105, 105);
     border: none;
-}
-.taskButton:active{
-    transform: scale(0.9);
-}
-.taskButton:hover{
-    color: white;
-}
-.buttons{
-    display: flex;
-    gap: 10px;
-}
-.ch-btn{
-    color: green;
-    border-color: green;
-}
-.x-btn{
-    color: red;
-    border-color: red;
-}
-.ch-btn:hover{
-    background-color: green;
-}
-.x-btn:hover{
-    background-color: red;
+    color: #00008b;
 }

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+html{
+    font-family: 'Caveat', cursive;
+    color: #00008b;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient( #6ba2f7, transparent 1px), linear-gradient( 90deg, #6ba2f7, transparent 1px);
+	background-size: 20px 20px;
+    background-position: top center;
+}
+input,a,button{
+    color: inherit;
+    font-family: inherit;
+}

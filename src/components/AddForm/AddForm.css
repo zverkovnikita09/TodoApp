@@ -1,0 +1,29 @@
+.addForm{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 24px;
+}
+.addInput{
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #00008b;
+}
+.addInput:focus{
+    outline: none;
+}
+.addBtn{
+    background-color: transparent;
+    border: 2px solid #00008b;
+    cursor: pointer;
+    width: 40px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.addBtn:hover{
+    color: white;
+    background-color: #00008b;
+}
+

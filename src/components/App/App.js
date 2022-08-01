@@ -1,16 +1,33 @@
 import React from "react";
 import List from "../List/List";
 import Title from "../Title/Title";
-import Search from "../Search-panel/Search-panel";
+import AddForm from "../AddForm/AddForm";
 import './App.css'
 
 export default class App extends React.Component{
   state ={
     todos: [
-      {task:'To get up', important: false, id: 1},
-      {task:'To brush teeth', important: false, id: 2},
-      {task:'To have breakfast', important: true, id: 3}
+      {task:'To get up', id: 1},
+      {task:'To brush teeth', id: 2},
+      {task:'To have breakfast', id: 3}
     ]
+  }
+
+  ids = 5;
+
+  addTask = (text)=>{
+    const newTask = {
+      task: text, 
+      id: this.ids++
+    };
+
+    this.setState(({todos})=>{
+      const todosUpd = [...todos, newTask]
+
+      return{
+        todos: todosUpd
+      }
+    })
   }
 
   deleteTask = (id)=>{
@@ -28,7 +45,7 @@ export default class App extends React.Component{
     return (
       <div className="app">
         <Title/>
-        <Search/>
+        <AddForm OnAdd={this.addTask}/>
         <List todos = {todos} onDelete={this.deleteTask}/>
       </div>
     )

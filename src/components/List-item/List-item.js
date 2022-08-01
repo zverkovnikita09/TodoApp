@@ -12,25 +12,20 @@ export default class ListItem extends React.Component{
         });
     }
     render(){
-        const {task, important, onDelete} = this.props;
-        const style = {
-            fontWeight: important ? 'bold' : 'normal',
-            borderWidth: important ? '3px' : '1px'
-        };
+        const {task, onDelete} = this.props;
 
         const {done} = this.state
+
         let className;
         if(done){
             className +=' done';
         }
 
         return (
-            <div className="listItem" style={style}>
-                <span className={className}>{task}</span>
-                <div className="buttons">
-                    <button className="taskButton ch-btn" type="button" onClick={this.isDone} disabled={done}><i className="fa-solid fa-check"></i></button>
-                    <button className="taskButton x-btn" type="button" onClick={onDelete}><i className="fa-solid fa-xmark"></i></button>
-                </div>
+            <div className="listItem">
+                <span className={className} onClick={this.isDone}>{task}</span>
+                <button className={`check-btn btns ${className}`} type="button" onClick={this.isDone}><i className="fa-solid fa-check"></i></button>
+                <button className="erase-btn btns" type="button" onClick={onDelete}><i class="fa-solid fa-eraser"></i></button>
             </div>
         )
     }
