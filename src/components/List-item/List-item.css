@@ -2,6 +2,7 @@
     position: relative;
     font-size: 35px;
     text-align: left;
+    user-select: none;
 }
 .listItem span{
     cursor: pointer;
