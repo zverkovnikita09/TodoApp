@@ -4,3 +4,10 @@
     margin-top: 12px;
     margin-bottom: 7px;
 }
+@media (max-width: 520px) {
+    .title{
+        margin-top: 22px;
+        font-size: 35px;
+        margin-bottom: 12px;
+    }
+}

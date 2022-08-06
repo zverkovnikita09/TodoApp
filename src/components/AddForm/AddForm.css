@@ -27,4 +27,20 @@
     color: white;
     background-color: #00008b;
 }
-
+@media (max-width: 520px) {
+    .addForm{
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        gap: 20px;
+    }
+    .addInput{
+        font-size: 25px;
+        width: 100%;
+    }
+    .addBtn{
+        height: 40px;
+        width: 100%;
+        font-size: 10px;
+    }
+}

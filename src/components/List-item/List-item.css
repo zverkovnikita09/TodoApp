@@ -6,7 +6,7 @@
 .listItem span{
     display: block;
     max-width: calc(100% - 80px);
-    font-size: 35px;
+    font-size: 40px;
     line-height: 100%;
     cursor: pointer;
     margin-left: 40px;
@@ -28,13 +28,13 @@
     transition: 0.1s;
     color: transparent;
     right: 0;
-    top: 10px;
+    top: 17px;
     font-size: 30px;
 }
 .erase-btn{
     border: none;
     left: 0;
-    top: 12px;
+    top: 19px;
     font-size: 20px;
 }
 .done{
@@ -47,4 +47,16 @@
     pointer-events: none;
     border: none;
     color: #00008b;
+}
+
+@media (max-width: 520px) {
+    .listItem span{
+        font-size: 20px;
+    }
+    .check-btn{
+        top: -2px;
+    }
+    .erase-btn{
+        top: 0px;
+    }
 }
