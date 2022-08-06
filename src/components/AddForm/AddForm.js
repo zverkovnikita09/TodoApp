@@ -15,15 +15,18 @@ class AddForm extends React.Component{
 
     submit = (e)=>{
         e.preventDefault();
-        this.props.OnAdd(this.state.task)
-        this.setState({
+        if(this.state.task!==''){
+            this.props.OnAdd(this.state.task)
+            this.setState({
             task: ''
-        })
+            })
+        }
+        return
     }
     render(){
         return (
             <form className="addForm" onSubmit={this.submit}>
-                <input className="addInput" onChange={this.onInputChange} id='AddForm' placeholder="Type your task..." value={this.state.task}/>
+                <input className="addInput" onChange={this.onInputChange} autoComplete='off' id='AddForm' placeholder="Type your task..." value={this.state.task}/>
                 <button className="addBtn"><i class="fa-solid fa-pen"></i></button>
             </form>
         )

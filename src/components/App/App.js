@@ -6,9 +6,8 @@ import Counter from "../Counter/Counter";
 import './App.css'
 
 export default class App extends React.Component{
-  state = {
-    todos: [],
-    filter: ''
+  state ={
+    todos: []
   }
 
   ids = 5;
@@ -56,13 +55,15 @@ export default class App extends React.Component{
     const doneCount = todos.filter(el=>el.done).length;
     const leftCount = todos.length - doneCount;
 
+    const filtered = todos.length>0 ? [...todos.filter((item)=> !item.done), ...todos.filter((item)=>item.done)] : [];
+
     return (
       <div className="app">
         <Title/>
         <Counter left={leftCount} done={doneCount}/>
         <AddForm OnAdd={this.addTask}/>
         <List 
-          todos = {todos} 
+          todos = {filtered} 
           onDelete={this.deleteTask}
           onDone={this.onDone}
         />
