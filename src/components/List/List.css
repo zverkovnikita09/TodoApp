@@ -6,6 +6,8 @@
     gap: 15px;
 }
 .call-to-act{
+    font-size: 25px;
+    cursor: pointer;
     color: gray;
     margin: 0;
     animation: callLoop 2s infinite ease-in-out;
@@ -15,7 +17,7 @@
         transform: scale(1);
     }
     50%{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     100%{
         transform: scale(1);

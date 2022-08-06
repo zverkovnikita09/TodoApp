@@ -7,7 +7,7 @@ export default class List extends React.Component{
   render(){
     const {todos, onDelete, onDone} = this.props;
     if(todos.length === 0){
-      return <h2 className='call-to-act'>Please add a task</h2>
+      return <label htmlFor='AddForm' className='call-to-act'>Please add a task</label>
     }
     else{
       const elements = todos.map((elem)=>{

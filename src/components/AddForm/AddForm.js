@@ -23,7 +23,7 @@ class AddForm extends React.Component{
     render(){
         return (
             <form className="addForm" onSubmit={this.submit}>
-                <input className="addInput" onChange={this.onInputChange} placeholder="Type your task..." value={this.state.task}/>
+                <input className="addInput" onChange={this.onInputChange} id='AddForm' placeholder="Type your task..." value={this.state.task}/>
                 <button className="addBtn"><i class="fa-solid fa-pen"></i></button>
             </form>
         )

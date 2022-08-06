@@ -6,12 +6,9 @@ import Counter from "../Counter/Counter";
 import './App.css'
 
 export default class App extends React.Component{
-  state ={
-    todos: [
-      /* {task:'To get up', id: 1, done: false},
-      {task:'To brush teeth', id: 2, done: false},
-      {task:'To have breakfast', id: 3, done: false} */
-    ]
+  state = {
+    todos: [],
+    filter: ''
   }
 
   ids = 5;
