@@ -4,7 +4,7 @@
     margin-top: 12px;
     margin-bottom: 7px;
 }
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .title{
         margin-top: 22px;
         font-size: 35px;

@@ -2,7 +2,7 @@
     font-size: 25px;
     line-height: 100%;
 }
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .counter{
         font-size: 20px;
         margin-bottom: 5px;

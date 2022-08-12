@@ -27,7 +27,7 @@
     color: white;
     background-color: #00008b;
 }
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .addForm{
         flex-direction: column;
         height: max-content;

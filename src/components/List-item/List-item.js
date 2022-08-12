@@ -14,7 +14,7 @@ const ListItem =(props)=>{
         <div className="listItem">
             <span className={className} onClick={onDone}>{task}</span>
             <button className={`check-btn btns ${className}`} type="button" onClick={onDone}><i className="fa-solid fa-check"></i></button>
-            <button className="erase-btn btns" type="button" onClick={onDelete}><i class="fa-solid fa-eraser"></i></button>
+            <button className="erase-btn btns" type="button" onClick={onDelete}><i className="fa-solid fa-eraser"></i></button>
         </div>
     )
 }
