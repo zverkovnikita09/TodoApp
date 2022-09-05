@@ -13,8 +13,6 @@ class AddForm extends React.Component{
         })
     }
 
-   /*  innerButton = window.matchMedia("(max-width: 550px)").matches ? "Написать" : <i class="fa-solid fa-pen"></i> */
-
     submit = (e)=>{
         e.preventDefault();
         if(this.state.task!==''){

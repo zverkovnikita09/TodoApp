@@ -10,7 +10,7 @@ export default class App extends React.Component{
     todos: []
   }
 
-  ids = 5;
+  ids = 0;
 
   addTask = (text)=>{
     const newTask = {
@@ -18,10 +18,9 @@ export default class App extends React.Component{
       id: this.ids++,
       done: false
     };
-
     this.setState(({todos})=>{
       const todosUpd = [...todos, newTask]
-
+      localStorage.setItem('todos',JSON.stringify(todosUpd))
       return{
         todos: todosUpd
       }
@@ -32,6 +31,8 @@ export default class App extends React.Component{
     this.setState(({todos})=>{
       const idx = todos.findIndex(el=>el.id === id);
       const todosUpd = [...todos.slice(0,idx), ...todos.slice(idx+1)]
+      this.ids--;
+      localStorage.setItem('todos',JSON.stringify(todosUpd))
       return{
         todos: todosUpd
       } 
@@ -43,12 +44,22 @@ export default class App extends React.Component{
       const idx = todos.findIndex(el=>el.id === id)
       const itemUpd = {...todos[idx], done: true};
       const todosUpd = [...todos.slice(0,idx), itemUpd, ...todos.slice(idx+1)]
-
+      localStorage.setItem('todos',JSON.stringify(todosUpd))
       return{
         todos: todosUpd
       } 
     })
   };
+
+
+  componentDidMount(){
+    this.setState(({todos})=>{
+      const todosUpd = JSON.parse(localStorage.getItem('todos'));
+      return {
+        todos: todosUpd
+      }
+    })
+  }
 
   render(){
     const {todos}=this.state;
