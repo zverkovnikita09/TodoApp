@@ -56,7 +56,7 @@ export default class App extends React.Component{
     this.setState(({todos})=>{
       const todosUpd = JSON.parse(localStorage.getItem('todos'));
       return {
-        todos: todosUpd
+        todos: todosUpd || todos
       }
     })
   }
